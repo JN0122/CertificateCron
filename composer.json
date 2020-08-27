@@ -1,0 +1,54 @@
+{
+  "name": "srag/plugins/certificatecron",
+  "description": "",
+  "type": "project",
+  "keywords": [
+    "ILIAS",
+    "Plugin",
+    "Certificate"
+  ],
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "studer + raimann ag - Team Custom 1",
+      "email": "support-custom1@studer-raimann.ch",
+      "homepage": "https://studer-raimann.ch",
+      "role": "Developer"
+    },
+    {
+      "name": "Theodor Truffer",
+      "email": "tt@studer-raimann.ch",
+      "homepage": "https://studer-raimann.ch",
+      "role": "Project Manager, Software Engineer"
+    }
+  ],
+  "support": {
+    "issues": "https://plugins.studer-raimann.ch/goto.php?target=uihk_srsu_PLCERTIFICATE"
+  },
+  "require": {
+    "php": ">=7.0",
+    "srag/librariesnamespacechanger": ">=0.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "srag\\Plugins\\CertificateCron\\": "src/"
+    },
+    "classmap": [
+      "classes/"
+    ],
+    "files": [
+      "../../../UIComponent/UserInterfaceHook/Certificate/vendor/autoload.php"
+    ]
+  },
+  "config": {
+    "classmap-authoritative": true,
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "pre-autoload-dump": [
+      "srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger::rewriteLibrariesNamespaces",
+      "srag\\LibrariesNamespaceChanger\\PHP72Backport::PHP72Backport"
+    ]
+  }
+}
