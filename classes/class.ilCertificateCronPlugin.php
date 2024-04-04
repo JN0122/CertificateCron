@@ -27,9 +27,9 @@ class ilCertificateCronPlugin extends ilCronHookPlugin
     /**
      * ilCertificateCronPlugin constructor
      */
-    public function __construct()
+    public function __construct(ilDBInterface $db,ilComponentRepositoryWrite $component_repository,string $id)
     {
-        parent::__construct();
+        parent::__construct($db, $component_repository, $id);
     }
 
 
@@ -58,7 +58,7 @@ class ilCertificateCronPlugin extends ilCronHookPlugin
     /**
      * @inheritDoc
      */
-    public function getCronJobInstance(/*string*/ $a_job_id)/*: ?ilCronJob*/
+    public function getCronJobInstance(/*string*/ $a_job_id):ilCronJob/*: ?ilCronJob*/
     {
         switch ($a_job_id) {
             case CertificateJob::CRON_JOB_ID:
