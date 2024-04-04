@@ -9,7 +9,7 @@ Start at your ILIAS root directory
 ```bash
 mkdir -p Customizing/global/plugins/Services/Cron/CronHook
 cd Customizing/global/plugins/Services/Cron/CronHook
-git clone https://github.com/fluxapps/CertificateCron.git CertificateCron
+git clone https://github.com/JN0122/CertificateCron.git CertificateCron
 ```
 Update and activate the plugin in the ILIAS Plugin Administration
 
